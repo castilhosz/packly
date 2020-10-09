@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Image, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Image, StyleSheet, Alert } from 'react-native';
 import { BaseButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
@@ -8,7 +8,14 @@ function Home() {
   const { navigate } = useNavigation();
 
   function handleNavigateToPackagePage() {
-    navigate('Package')
+    if (code=='') {
+      Alert.alert(
+        'error 204:',
+        "You didn't especified the Correios's code"
+      )
+    } else {
+      navigate('Package', {code: code, page: 'Home'})
+    }
   }
 
   return(

@@ -1,13 +1,16 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 import { BaseButton } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 function Package() {
   const { navigate } = useNavigation();
+  const route = useRoute();
+
+  const { code, page } = route.params;
 
   function handleNavigateToHomePage() {
-    navigate('Home');
+    navigate(page);
   };
 
   return(
@@ -17,7 +20,7 @@ function Package() {
           <BaseButton onPress={handleNavigateToHomePage}>
             <Image source={require('../assets/arrow.png')}/>
           </BaseButton>
-          <Text style={styles.headerTitle}> Package not saved </Text>
+            <Text style={styles.headerTitle}> Package not saved {code}</Text>
           <BaseButton>
             <Image source={require('../assets/save.png')}/>
           </BaseButton>
