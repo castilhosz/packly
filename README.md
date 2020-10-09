@@ -2,9 +2,8 @@
   <img src='./src/assets/logotext.png' alt='Packly'>
 </p>
 
-<div align='center'>
 If you want to take a look on all the screens of the App, the are [here](https://www.figma.com/file/qtIeOUdyQQiRn3FfKfdgTc/Packly?node-id=1%3A15).
-</div>
+
 
 
 
