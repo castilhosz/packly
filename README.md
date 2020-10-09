@@ -83,6 +83,8 @@ Email-me: arthurcastilhos@gmail.com
 
 Connect with me at [LinkedIn](https://linkedin.com/in/arthrc)
 
+If you don't know how contributing works, [learn here](https://github.com/firstcontributions/first-contributions) 
+
 Thank You!
 
 ## License
