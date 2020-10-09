@@ -4,9 +4,6 @@
 
 If you want to take a look on all the screens of the App, the are [here](https://www.figma.com/file/qtIeOUdyQQiRn3FfKfdgTc/Packly?node-id=1%3A15).
 
-
-
-
 ## About this Project
 
 The idea of the App is:
