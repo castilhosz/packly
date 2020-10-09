@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 import { BaseButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
@@ -34,42 +34,45 @@ function Package() {
         </View>
       </View>
 
-      <View style={styles.packageUpdateContainer}>
-        <Text style={styles.packageUpdateTitle}>Objeto recebido pelo destinatario</Text>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Image source={require('../assets/check.png')}/>
-          <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
-            <Text style={styles.packageUpdateText1}> CURITIBA / PR </Text>
-            <Text style={styles.packageUpdateText2}> 2/10/2020 16:25</Text>
-            <Text style={styles.packageUpdateText2}> 2 dias</Text>
+      <ScrollView>
+        <View style={styles.packageUpdateContainer}>
+          <Text style={styles.packageUpdateTitle}>Objeto recebido pelo destinatario</Text>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Image source={require('../assets/check.png')}/>
+            <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
+              <Text style={styles.packageUpdateText1}> CURITIBA / PR </Text>
+              <Text style={styles.packageUpdateText2}> 2/10/2020 16:25</Text>
+              <Text style={styles.packageUpdateText2}> 2 dias</Text>
+            </View>
           </View>
         </View>
-      </View>
 
-      <View style={styles.packageUpdateContainer}>
-        <Text style={styles.packageUpdateTitle}>Objeto ecaminhado de Agencia dos Correios em SANTOS / SP para Unidade de tratamento em CAJAMAR / SP</Text>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Image source={require('../assets/shippingpurple.png')}/>
-          <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
-            <Text style={styles.packageUpdateText1}> CAJAMAR / SP </Text>
-            <Text style={styles.packageUpdateText2}> 23/09/2020 22:14</Text>
-            <Text style={styles.packageUpdateText2}> 1 mes e 24 dias</Text>
+        <View style={styles.packageUpdateContainer}>
+          <Text style={styles.packageUpdateTitle}>Objeto ecaminhado de Agencia dos Correios em SANTOS / SP para Unidade de tratamento em CAJAMAR / SP</Text>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Image source={require('../assets/shippingpurple.png')}/>
+            <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
+              <Text style={styles.packageUpdateText1}> CAJAMAR / SP </Text>
+              <Text style={styles.packageUpdateText2}> 23/09/2020 22:14</Text>
+              <Text style={styles.packageUpdateText2}> 1 mes e 24 dias</Text>
+            </View>
           </View>
         </View>
-      </View>
 
-      <View style={styles.packageUpdateContainer}>
-        <Text style={styles.packageUpdateTitle}>Objeto postado</Text>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <Image source={require('../assets/posted.png')}/>
-          <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
-            <Text style={styles.packageUpdateText1}> CAJAMAR / SP </Text>
-            <Text style={styles.packageUpdateText2}> 22/09/2020 17:21</Text>
-            <Text style={styles.packageUpdateText2}> 1 mes e 25 dias</Text>
+        <View style={styles.packageUpdateContainer}>
+          <Text style={styles.packageUpdateTitle}>Objeto postado</Text>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Image source={require('../assets/posted.png')}/>
+            <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
+              <Text style={styles.packageUpdateText1}> CAJAMAR / SP </Text>
+              <Text style={styles.packageUpdateText2}> 22/09/2020 17:21</Text>
+              <Text style={styles.packageUpdateText2}> 1 mes e 25 dias</Text>
+            </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
+    
   )
 }
 
