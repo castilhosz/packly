@@ -1,5 +1,5 @@
 <p align='center'>
-  <img src='./src/assets/logotext.png' alt='Packly'>
+  <img src='./.github/assets/logo.png' alt='Packly'>
 </p>
 
 If you want to take a look on all the screens of the App, the are [here](https://www.figma.com/file/qtIeOUdyQQiRn3FfKfdgTc/Packly?node-id=1%3A15).
