@@ -17,7 +17,7 @@ export default function App() {
   } else {
     return(
       <NavigationContainer>
-        <StatusBar barStyle='light-content' backgroundColor='#AD15FF'/>
+        <StatusBar barStyle='light-content' backgroundColor='#A500FF'/>
         <Routes />
       </NavigationContainer>
   )};

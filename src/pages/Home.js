@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Image, StyleSheet } from 'react-native';
+import { BaseButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
-function Home({ navigation }) {
+function Home() {
   const [code, setCode] = useState('');
+  const { navigate } = useNavigation();
+
+  function handleNavigateToPackagePage() {
+    navigate('Package')
+  }
 
   return(
     <View>
@@ -16,9 +23,11 @@ function Home({ navigation }) {
         placeholder="Correios's code"
         value={code}
         onChangeText={setCode}/>
-        <TouchableOpacity onPress={navigation.navigate('Package')}>
-          <Text>Rastrear</Text>
-        </TouchableOpacity>
+        <BaseButton
+        onPress={handleNavigateToPackagePage}
+        >
+          <Text>Let's track!</Text>
+        </BaseButton>
       </View>
     </View>
   )

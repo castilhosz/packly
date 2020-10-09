@@ -1,14 +1,27 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
+import { BaseButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
-function Package({ navigation }) {
+function Package() {
+  const { navigate } = useNavigation();
+
+  function handleNavigateToHomePage() {
+    navigate('Home');
+  };
 
   return(
     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
       <Text>Package Screen</Text>
-      <TouchableOpacity onPress={navigation.navigate('Home')}>
-        <Text>Voltar</Text>
-      </TouchableOpacity>
+
+      <BaseButton
+      onPress={handleNavigateToHomePage}
+      >
+        <Text>
+          back to home 
+        </Text>
+      </BaseButton>
+
     </View>
   )
 }
