@@ -4,7 +4,7 @@ import { BaseButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
 function Home() {
-  const [code, setCode] = useState('');
+  var [code, setCode] = useState('');
   const { navigate } = useNavigation();
 
   function handleNavigateToPackagePage() {
@@ -95,5 +95,5 @@ const styles = StyleSheet.create({
 
 export default Home;
 
-export const Code = code;
-export const Page = 'Home';
+export var code = code;
+export const page = 'Home';

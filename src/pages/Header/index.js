@@ -1,20 +1,17 @@
 import React from 'react';
-import { View, Image, ScrollView } from 'react-native';
+import { View, Image } from 'react-native';
 import { BaseButton } from 'react-native-gesture-handler';
 
 import { code, page } from '../Home';
 import { HContainer, HTitle, HText } from './styles';
 
-async function track() {
-const res = await fetch(
+const res = fetch(
   'http://localhost:3001/api', {
     method: 'GET',
     body: code,
 });
-}
-track();
 
-const data = res.json();
+const data = res;
 var lastData = data[-1]
 
 var lastStatus = lastData.map(item => item.status);
