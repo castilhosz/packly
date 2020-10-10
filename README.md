@@ -70,3 +70,7 @@ Thank You!
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/arthrc/packlyNew/license.md) file for details
+
+## Other repositories
+
+- [Server client](https://github.com/arthrc/packly-server)
