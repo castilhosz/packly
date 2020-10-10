@@ -1,4 +1,3 @@
-import { rastrearEncomendas } from 'correios-brasil';
 import React, { useState, useEffect} from 'react';
 import { FlatList } from 'react-native';
 
@@ -9,9 +8,11 @@ export default function Feed() {
   const [feed, setFeed] = useState([]);
 
   async function rastrear() {
-    const response = await fetch(
-      ''
-    );
+    try {const response = await fetch(
+      'http://localhost:3001/api', {
+        method: 'GET',
+        body: code,
+      })} catch (error) { console.error(error) };
 
     setFeed(data);
   };
