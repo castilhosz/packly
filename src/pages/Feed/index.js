@@ -1,59 +1,57 @@
-import { rastro } from 'rastrojs';
-import React from 'react';
-import { ScrollView } from 'react-native';
+import { rastrearEncomendas } from 'correios-brasil';
+import React, { useState, useEffect} from 'react';
+import { FlatList } from 'react-native';
 
 import { Box, BottomBox, City, Date, Description, Time, Title } from './styles';
 
 export default function Feed() {
+  let code = ['PY149864129BR'];
+  const [feed, setFeed] = useState([]);
 
-    const res = await rastro.track(code);
-    const response = res[0];
-    const data = await response.json();
+  async function rastrear() {
+    const response = await fetch(
+      ''
+    );
 
-  if (data.status == 'Objeto postado') {
-  return (
-      <ScrollView>
-        <Box>
-          <Title></Title>
-          <BottomBox>
-            <Image source={require('../../assets/posted.png')}/>
-            <Description>
-              <City></City>
-              <Date></Date>
-              <Time></Time>
-            </Description>
-          </BottomBox>
-        </Box>
-      </ScrollView>
-  )} else if (data.status == 'Objeto entregue ao destinatário') {
-    return (
-      <ScrollView>
-        <Box>
-          <Title></Title>
-          <BottomBox>
-            <Image source={require('../../assets/check.png')}/>
-            <Description>
-              <City></City>
-              <Date></Date>
-              <Time></Time>
-            </Description>
-          </BottomBox>
-        </Box>
-      </ScrollView>
-  )} else {
-    return (
-      <ScrollView>
-        <Box>
-          <Title></Title>
-          <BottomBox>
-            <Image source={require('../../assets/shippingpurple.png')}/>
-            <Description>
-              <City></City>
-              <Date></Date>
-              <Time></Time>
-            </Description>
-          </BottomBox>
-        </Box>
-      </ScrollView>
+    setFeed(data);
+  };
+
+  useEffect(() => {
+    rastrear();
+  }, []);
+
+  return(
+    <FlatList
+    data={feed}
+    renderItem={({ item }) => (
+      <Box>
+        <Title>{item.status}</Title>
+        <BottomBox>
+          <Image source={require('../../assets/shippingpurple.png')}/>
+          <Description>
+            <City>{item.origem} a {item.destino}</City>
+            <Date>{item.data}</Date>
+            <Time>{item.hora}</Time>
+          </Description>
+        </BottomBox>
+      </Box>
     )}
+    />
+  )
 }
+
+{/*
+<ScrollView>
+  <Box>
+    <Title></Title>
+    <BottomBox>
+      <Image source={require('../../assets/shippingpurple.png')}/>
+      <Description>
+        <City></City>
+        <Date></Date>
+        <Time></Time>
+      </Description>
+    </BottomBox>
+  </Box>
+</ScrollView>
+*/}
