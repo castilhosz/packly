@@ -37,43 +37,25 @@ It's free!
 
 To run this project in the development mode, you'll need to have a basic environment to run a React-Native App, that can be found [here](https://facebook.github.io/react-native/docs/getting-started)
 
-### Installing
+## How to run the code locally?
 
-#### Cloning the Repository
+ - Firstly, you need to setup your PC to run a react-native app. [Learn here how to do this.](https://reactnative.dev/docs/environment-setup)
+ - Clone this repository.
+ - Open the cloned repository folder and type ```npm install``` or ```yarn``` to install dependencies.
+ - Run the server, you can learn how to do this [here](https://github.com/arthrc/packly-server).
+ - With all dependencies installed, the server running and the environment properly configured, you can now run the app:
+ ```
+ run start
+ ```
+ iOS
+ ```
+ run ios
+ ```
+ Android
+ ```
+ run android
+ ```
 
-```
-$ git clone https://github.com/arthrc/packlyNew
-
-$ cd packlyNew
-```
-
-#### Installing dependencies
-
-```
-$ yarn
-```
-
-or 
-
-```
-$ npm install
-```
-
-### Running
-
-With all dependencies installed and the environment properly configured, you can now run the app:
-
-Android
-
-```
-$ react-native run-android
-```
-
-iOS
-
-```
-$ react-native run-ios
-```
 
 ## Contribuiting
 
