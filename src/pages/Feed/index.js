@@ -1,58 +1,75 @@
-import React, { useState, useEffect} from 'react';
-import { FlatList } from 'react-native';
+import React from 'react';
+import { Image, ScrollView } from 'react-native';
+import { code } from '../Home';
+import { Box, BottomBox, City, Date, Description, Title } from './styles';
 
-import { Box, BottomBox, City, Date, Description, Time, Title } from './styles';
-
-export default function Feed() {
-  let code = ['PY149864129BR'];
-  const [feed, setFeed] = useState([]);
-
-  async function rastrear() {
-    try {const response = await fetch(
-      'http://localhost:3001/api', {
-        method: 'GET',
-        body: code,
-      })} catch (error) { console.error(error) };
-
-    setFeed(data);
-  };
-
-  useEffect(() => {
-    rastrear();
-  }, []);
-
-  return(
-    <FlatList
-    data={feed}
-    renderItem={({ item }) => (
-      <Box>
-        <Title>{item.status}</Title>
-        <BottomBox>
-          <Image source={require('../../assets/shippingpurple.png')}/>
-          <Description>
-            <City>{item.origem} a {item.destino}</City>
-            <Date>{item.data}</Date>
-            <Time>{item.hora}</Time>
-          </Description>
-        </BottomBox>
-      </Box>
-    )}
-    />
-  )
+async function track() {
+const res = await fetch(
+  'http://localhost:3001/api', {
+    method: 'GET',
+    body: code,
+});
 }
+track();
 
-{/*
-<ScrollView>
-  <Box>
-    <Title></Title>
-    <BottomBox>
-      <Image source={require('../../assets/shippingpurple.png')}/>
-      <Description>
-        <City></City>
-        <Date></Date>
-        <Time></Time>
-      </Description>
-    </BottomBox>
-  </Box>
-</ScrollView>
-*/}
+const data = res.json();
+
+var date = data.map(item => item.trackedAt);
+var day = date.slice(8, 10);
+var month = date.slice(5,7);
+var year = date.slice(0,4);
+
+var observation = data.map(item => item.observation);
+var locale = data.map(item => item.locale);
+var status = data.map(item => item.status);
+
+function Feed() {
+  if (status=='objeto postado') {
+    return(
+      <ScrollView>
+        <Box>
+          <Title>{status}</Title>
+          <BottomBox>
+            <Image source={require('../../assets/posted.png')}/>
+            <Description>
+              <City>{locale}</City>
+              <Date>{day}/{month}/{year}</Date>
+            </Description>
+          </BottomBox>
+        </Box>
+      </ScrollView>
+    );
+  } else if (status=='objeto entregue ao destinatário') {
+    return(
+      <ScrollView>
+        <Box>
+          <Title>{status}</Title>
+          <BottomBox>
+            <Image source={require('../../assets/check.png')}/>
+            <Description>
+              <City>{locale}</City>
+              <Date>{day}/{month}/{year}</Date>
+            </Description>
+          </BottomBox>
+        </Box>
+      </ScrollView>
+    );
+  } else {
+    return(
+      <ScrollView>
+        <Box>
+          <Title>{status}</Title>
+          <BottomBox>
+            <Image source={require('../../assets/shippingpurple.png')}/>
+            <Description>
+              <City>{observation}</City>
+              <Date>{day}/{month}/{year}</Date>
+            </Description>
+          </BottomBox>
+        </Box>
+      </ScrollView>
+    );
+  };
+};
+
+export default Feed;

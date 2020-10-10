@@ -14,7 +14,7 @@ function Home() {
         "You didn't especified the Correios's code"
       )
     } else {
-      navigate('Package', {code: code, page: 'Home'})
+      navigate('Package')
     }
   }
 
@@ -94,3 +94,6 @@ const styles = StyleSheet.create({
 })
 
 export default Home;
+
+export const Code = code;
+export const Page = 'Home';
