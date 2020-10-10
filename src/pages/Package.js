@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { BaseButton } from 'react-native-gesture-handler';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
@@ -20,7 +20,7 @@ function Package() {
           <BaseButton onPress={handleNavigateToHomePage}>
             <Image source={require('../assets/arrow.png')}/>
           </BaseButton>
-            <Text style={styles.headerTitle}> Package not saved {code}</Text>
+            <Text style={styles.headerTitle}>Package not saved</Text>
           <BaseButton>
             <Image source={require('../assets/save.png')}/>
           </BaseButton>
@@ -32,50 +32,11 @@ function Package() {
           </View>
           <View style={{ flexDirection: 'row' }}>
             <Image style={{width: 24, height: 24}}source={require('../assets/code.png')}/>
-            <Text style={styles.headerText}>Track code: PY5465482 </Text>
+            <Text style={styles.headerText}>Track code: {code} </Text>
           </View>
         </View>
       </View>
-
-      <ScrollView>
-        <View style={styles.packageUpdateContainer}>
-          <Text style={styles.packageUpdateTitle}>Objeto recebido pelo destinatario</Text>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Image source={require('../assets/check.png')}/>
-            <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
-              <Text style={styles.packageUpdateText1}> CURITIBA / PR </Text>
-              <Text style={styles.packageUpdateText2}> 2/10/2020 16:25</Text>
-              <Text style={styles.packageUpdateText2}> 2 dias</Text>
-            </View>
-          </View>
-        </View>
-
-        <View style={styles.packageUpdateContainer}>
-          <Text style={styles.packageUpdateTitle}>Objeto ecaminhado de Agencia dos Correios em SANTOS / SP para Unidade de tratamento em CAJAMAR / SP</Text>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Image source={require('../assets/shippingpurple.png')}/>
-            <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
-              <Text style={styles.packageUpdateText1}> CAJAMAR / SP </Text>
-              <Text style={styles.packageUpdateText2}> 23/09/2020 22:14</Text>
-              <Text style={styles.packageUpdateText2}> 1 mes e 24 dias</Text>
-            </View>
-          </View>
-        </View>
-
-        <View style={styles.packageUpdateContainer}>
-          <Text style={styles.packageUpdateTitle}>Objeto postado</Text>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Image source={require('../assets/posted.png')}/>
-            <View style={{justifyContent: 'space-between', right: 150, paddingVertical: 5}}>
-              <Text style={styles.packageUpdateText1}> CAJAMAR / SP </Text>
-              <Text style={styles.packageUpdateText2}> 22/09/2020 17:21</Text>
-              <Text style={styles.packageUpdateText2}> 1 mes e 25 dias</Text>
-            </View>
-          </View>
-        </View>
-      </ScrollView>
     </View>
-    
   )
 }
 
@@ -99,31 +60,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     left: 5,
   },
-  packageUpdateContainer: {
-    marginHorizontal: 16,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 8,
-    borderColor: '#E8E8E8', 
-    marginVertical: 15,
-  },
-  packageUpdateTitle: {
-    fontFamily: 'Inter_600SemiBold',
-    fontSize: 16,
-    color: '#000',
-    alignSelf: 'center',
-    paddingHorizontal: 20
-  },
-  packageUpdateText1: {
-    fontFamily: 'Inter_600SemiBold',
-    fontSize: 16,
-    color: '#000',
-  },
-  packageUpdateText2: {
-    fontFamily: 'Inter_400Regular',
-    fontSize: 13,
-    fontStyle: 'italic',
-    color: '#9f9f9f',
-  }
 })
 
 export default Package;
