@@ -56,7 +56,7 @@ function Header() {
             </BaseButton>
               <HTitle>Package not saved</HTitle>
             <BaseButton>
-              <Image source={require('../../assets/save.png')}/>
+              <Image alt='' source={require('../../assets/save.png')}/>
             </BaseButton>
           </View>
           <View>
