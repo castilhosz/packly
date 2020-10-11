@@ -27,7 +27,7 @@ function Header() {
         <HContainer>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <BaseButton onPress={handleNavigateToHomePage}>
-              <Image source={require('../../assets/arrow.png')}/>
+              <Image alt='' source={require('../../assets/arrow.png')}/>
             </BaseButton>
               <HTitle>Package not saved</HTitle>
             <BaseButton>
@@ -36,11 +36,11 @@ function Header() {
           </View>
           <View>
             <View style={{ flexDirection: 'row', paddingTop: 25, }}>
-              <Image source={require('../../assets/shipping.png')}/>
+              <Image alt='' source={require('../../assets/shipping.png')}/>
               <HText>Status: Posted</HText>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <Image style={{width: 24, height: 24}}source={require('../../assets/code.png')}/>
+              <Image alt='' style={{width: 24, height: 24}}source={require('../../assets/code.png')}/>
               <HText>Track code: {code} </HText>
             </View>
           </View>
@@ -52,7 +52,7 @@ function Header() {
         <HContainer>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <BaseButton onPress={handleNavigateToHomePage}>
-              <Image source={require('../../assets/arrow.png')}/>
+              <Image alt=''source={require('../../assets/arrow.png')}/>
             </BaseButton>
               <HTitle>Package not saved</HTitle>
             <BaseButton>
@@ -61,11 +61,11 @@ function Header() {
           </View>
           <View>
             <View style={{ flexDirection: 'row', paddingTop: 25, }}>
-              <Image source={require('../../assets/shipping.png')}/>
+              <Image alt='' source={require('../../assets/shipping.png')}/>
               <HText>Status: Delivered</HText>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <Image style={{width: 24, height: 24}}source={require('../../assets/code.png')}/>
+              <Image alt='' style={{width: 24, height: 24}}source={require('../../assets/code.png')}/>
               <HText>Track code: {code} </HText>
             </View>
           </View>
@@ -77,20 +77,20 @@ function Header() {
         <HContainer>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <BaseButton onPress={handleNavigateToHomePage}>
-              <Image source={require('../../assets/arrow.png')}/>
+              <Image alt='' source={require('../../assets/arrow.png')}/>
             </BaseButton>
               <HTitle>Package not saved</HTitle>
             <BaseButton>
-              <Image source={require('../../assets/save.png')}/>
+              <Image alt='' source={require('../../assets/save.png')}/>
             </BaseButton>
           </View>
           <View>
             <View style={{ flexDirection: 'row', paddingTop: 25, }}>
-              <Image source={require('../../assets/shipping.png')}/>
+              <Image alt='' source={require('../../assets/shipping.png')}/>
               <HText>Status: In transit</HText>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <Image style={{width: 24, height: 24}}source={require('../../assets/code.png')}/>
+              <Image alt='' style={{width: 24, height: 24}}source={require('../../assets/code.png')}/>
               <HText>Track code: {code} </HText>
             </View>
           </View>
