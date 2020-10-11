@@ -27,7 +27,7 @@ function Feed() {
         <Box>
           <Title>{status}</Title>
           <BottomBox>
-            <Image source={require('../../assets/posted.png')}/>
+            <Image alt='' source={require('../../assets/posted.png')}/>
             <Description>
               <City>{locale}</City>
               <Date>{day}/{month}/{year}</Date>
@@ -42,7 +42,7 @@ function Feed() {
         <Box>
           <Title>{status}</Title>
           <BottomBox>
-            <Image source={require('../../assets/check.png')}/>
+            <Image alt='' source={require('../../assets/check.png')}/>
             <Description>
               <City>{locale}</City>
               <Date>{day}/{month}/{year}</Date>
@@ -57,7 +57,7 @@ function Feed() {
         <Box>
           <Title>{status}</Title>
           <BottomBox>
-            <Image source={require('../../assets/shippingpurple.png')}/>
+            <Image alt='' source={require('../../assets/shippingpurple.png')}/>
             <Description>
               <City>{observation}</City>
               <Date>{day}/{month}/{year}</Date>
