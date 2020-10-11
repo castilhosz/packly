@@ -3,13 +3,13 @@ import { Image, ScrollView } from 'react-native';
 import { code } from '../Home';
 import { Box, BottomBox, City, Date, Description, Title } from './styles';
 
-const res = fetch(
+var data = async function() {
+  await fetch(
   'http://localhost:3001/api', {
     method: 'GET',
     body: code,
 });
-
-const data = res;
+}
 
 var date = data.map(item => item.trackedAt);
 var day = date.slice(8, 10);
