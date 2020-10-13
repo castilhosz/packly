@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "~7.9.0",
     "babel-jest": "~25.2.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "jest": "~25.2.6",
     "react-test-renderer": "~16.13.1"
   },
