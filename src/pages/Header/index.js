@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Image } from 'react-native';
 import { BaseButton } from 'react-native-gesture-handler';
 
 import { code, page } from '../Home';
 import { HContainer, HTitle, HText } from './styles';
 
-const [data, setData] = useState([]);
+const [data, setData] = useState();
 async function track() {
-  const data = await fetch(
+  const response = await fetch(
     'http://localhost:3001/api', {
       method: 'GET',
       body: code,
   });
+
+  const data = await response.json();
+
   setData(data)
 };
-track()
+useEffect(() => {
+  track();
+});
 
 var lastData = data(data.length - 1);
 
