@@ -5,21 +5,15 @@ import { BaseButton } from 'react-native-gesture-handler';
 import { code, page } from '../Home';
 import { HContainer, HTitle, HText } from './styles';
 
-const [data, setData] = useState();
-async function track() {
-  const response = await fetch(
+const [data, setData] = useState(null);
+useEffect(() => {
+  fetch(
     'http://localhost:3001/api', {
       method: 'GET',
       body: code,
+    }).then( res => res.json())
+    .then( response => { setData(response)});
   });
-
-  const data = await response.json();
-
-  setData(data)
-};
-useEffect(() => {
-  track();
-});
 
 var lastData = data(data.length - 1);
 
