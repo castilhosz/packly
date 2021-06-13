@@ -42,7 +42,7 @@ To run this project in the development mode, you'll need to have a basic environ
  - Firstly, you need to setup your PC to run a react-native app. [Learn here how to do this.](https://reactnative.dev/docs/environment-setup)
  - Clone this repository.
  - Open the cloned repository folder and type ```npm install``` or ```yarn``` to install dependencies.
- - Run the server, you can learn how to do this [here](https://github.com/arthrc/packly-server).
+ - Run the server, you can learn how to do this [here](https://github.com/artwesz/packly-server).
  - With all dependencies installed, the server running and the environment properly configured, you can now run the app:
  ```
  run start
@@ -63,14 +63,14 @@ You can send how many PR's do you want, I'll be glad to analyse and accept them!
 
 Email-me: arthurcastilhos@gmail.com
 
-Connect with me at [LinkedIn](https://linkedin.com/in/arthrc)
+Connect with me at [LinkedIn](https://linkedin.com/in/artwesz)
 
 Thank You!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/arthrc/packlyNew/license.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/artwesz/packly/license.md) file for details
 
 ## Other repositories
 
-- [Server client](https://github.com/arthrc/packly-server)
+- [Server client](https://github.com/artwesz/packly-server)
