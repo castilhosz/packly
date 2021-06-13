@@ -63,7 +63,7 @@ You can send how many PR's do you want, I'll be glad to analyse and accept them!
 
 Email-me: arthurcastilhos@gmail.com
 
-Connect with me at [LinkedIn](https://linkedin.com/in/artwesz)
+Connect with me at [LinkedIn](https://linkedin.com/in/artcastilhos)
 
 Thank You!
 
