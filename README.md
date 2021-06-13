@@ -16,7 +16,7 @@ This project is part of my personal portfolio. I'll be happy if you could provid
 
 Email-me: arthurcastilhos@gmail.com
 
-Connect with me at [LinkedIn](https://linkedin.com/in/arthrc)
+Connect with me at [LinkedIn](https://linkedin.com/in/artcastilhos)
 
 Also, you can use this Project as you wish, be for study, be for make improvements or earn money with it!
 
