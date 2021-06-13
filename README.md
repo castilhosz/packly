@@ -69,8 +69,8 @@ Thank You!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/artwesz/packly/license.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/artcastilhos/packly/license.md) file for details
 
 ## Other repositories
 
-- [Server client](https://github.com/artwesz/packly-server)
+- [Server client](https://github.com/artcastilhos/packly-server)
